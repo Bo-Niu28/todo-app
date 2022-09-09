@@ -1,13 +1,13 @@
-import React from "react";
+import Card from "../shared/Card";
 
 function Header() {
   return (
-    <header>
-      <div className="container">
+    <Card className="card__purple">
+      <header>
         <div className="header__burger"></div>
         <h1>todo App</h1>
-      </div>
-    </header>
+      </header>
+    </Card>
   );
 }
 

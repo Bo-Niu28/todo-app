@@ -1,0 +1,25 @@
+@use "base";
+
+.btn {
+  border: none;
+  padding: 1rem 2rem;
+  background-color: base.$primary-color;
+  color: white;
+  font-family: base.$font;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+:hover.btn {
+  transform: scale(1.1);
+}
+
+.btn__submit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8%;
+  margin: 0 auto;
+}

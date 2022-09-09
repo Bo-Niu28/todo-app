@@ -1,6 +1,7 @@
 @use "base";
 
-.card {
+.card,
+.card__purple {
   margin: 1rem;
   padding: 1rem;
   border-radius: 15px;
@@ -16,4 +17,5 @@
 .card__white {
   background-color: white;
   color: base.$font-color;
+  position: relative;
 }
