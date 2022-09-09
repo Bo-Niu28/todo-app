@@ -1,0 +1,31 @@
+$bg-color: rgb(227, 233, 255);
+$primary-color: rgb(175, 126, 235);
+$font-color: rgb(103, 109, 123);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.2rem;
+  background-color: $bg-color;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__app {
+  width: 500px;
+  min-height: 40vh;
+}

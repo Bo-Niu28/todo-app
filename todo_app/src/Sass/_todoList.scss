@@ -1,0 +1,32 @@
+@use "base";
+.todo__item {
+  margin: 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .todo__item--task {
+    cursor: pointer;
+    width: 80%;
+    .todo__item--del {
+      color: base.$font-color;
+      transform: all 0.3s ease;
+    }
+  }
+  :hover.todo__item--del {
+    color: base.$primary-color;
+    scale: 1.2;
+    cursor: pointer;
+  }
+  .todo__item--check {
+    cursor: pointer;
+  }
+}
+
+.todo__list {
+  min-height: 20vh;
+}
+
+.todo__item--complete {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
