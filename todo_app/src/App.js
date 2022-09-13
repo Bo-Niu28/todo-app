@@ -21,7 +21,9 @@ function App() {
               + New Task
             </button>
           </div>
-          {isAdding && <TodoForm onAdd={todoAdding} />}
+          {isAdding && (
+            <TodoForm onAdd={todoAdding} setIsAdding={setIsAdding} />
+          )}
         </div>
       </div>
     </TodoProvider>

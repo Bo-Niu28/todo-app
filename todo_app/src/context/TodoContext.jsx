@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const TodoContext = createContext();
 
@@ -38,12 +39,18 @@ export const TodoProvider = ({ children }) => {
     console.log(id);
   };
 
+  const addTodo = (newTodo) => {
+    newTodo.id = uuidv4();
+    setTodoList([newTodo, ...todoList]);
+  };
+
   return (
     <TodoContext.Provider
       value={{
         todoList,
         toggleTodo,
         deleteTodo,
+        addTodo,
       }}
     >
       {children}
