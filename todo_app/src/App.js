@@ -5,7 +5,11 @@ import TodoForm from "./components/TodoForm";
 import { useState } from "react";
 
 function App() {
-  const [isAdding, setIsAdding] = useState(true);
+  const [isAdding, setIsAdding] = useState(false);
+
+  const todoAdding = () => {
+    setIsAdding(!isAdding);
+  };
   return (
     <TodoProvider>
       <div className="App">
@@ -13,9 +17,11 @@ function App() {
           <Header />
           <div className="card card__white">
             <TodoList />
-            <button className="btn btn__submit">+ New Task</button>
+            <button className="btn btn__submit" onClick={todoAdding}>
+              + New Task
+            </button>
           </div>
-          {isAdding && <TodoForm />}
+          {isAdding && <TodoForm onAdd={todoAdding} />}
         </div>
       </div>
     </TodoProvider>
